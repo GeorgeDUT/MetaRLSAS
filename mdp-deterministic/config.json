@@ -1,0 +1,27 @@
+{
+  "env-name": "TabularMDPDeterministic-v0",
+  "gamma": 0.95,
+  "gae-lambda": 1.0,
+  "first-order": false,
+  "hidden-sizes": [
+    32,
+    32
+  ],
+  "nonlinearity": "relu",
+  "fast-batch-size": 17,
+  "num-steps": 1,
+  "fast-lr": 0.5,
+  "num-batches": 10,
+  "meta-batch-size": 30,
+  "max-kl": 0.01,
+  "cg-iters": 10,
+  "cg-damping": 1e-05,
+  "ls-max-steps": 2,
+  "ls-backtrack-ratio": 0.8,
+  "config": "configs/maml/mdp/mdp-deterministic.yaml",
+  "output_folder": "mdp-deterministic",
+  "seed": 1,
+  "num_workers": 8,
+  "use_cuda": false,
+  "device": "cpu"
+}
