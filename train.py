@@ -7,6 +7,7 @@ import json
 import os
 import yaml
 from tqdm import trange
+import time
 
 import maml_rl.envs
 from maml_rl.metalearners import MAMLTRPO
@@ -95,6 +96,9 @@ if __name__ == '__main__':
     import argparse
     import multiprocessing as mp
 
+    # time
+    time_start = time.time()
+
     parser = argparse.ArgumentParser(description='Reinforcement learning with '
         'Model-Agnostic Meta-Learning (MAML) - Train')
 
@@ -119,3 +123,7 @@ if __name__ == '__main__':
                    and args.use_cuda) else 'cpu')
 
     main(args)
+
+    # time
+    time_end = time.time()
+    print("all offline training time cost (second)", time_end-time_start)

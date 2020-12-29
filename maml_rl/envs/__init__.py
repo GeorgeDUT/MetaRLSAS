@@ -30,13 +30,15 @@ register(
     max_episode_steps=25
 )
 
+
+# MY experiment!!!!!!!!!!!!!!!!!!!!
 # Test the meta algorithm, this is a deterministic reward function mdp.
 
 register(
     'TabularMDPDeterministic-v0',
     entry_point='maml_rl.envs.mdp-deterministic:TabularMDPEnv',
-    kwargs={'num_states': 2, 'num_actions': 2},
-    max_episode_steps=2
+    kwargs={'num_states': 81, 'num_actions': 5},
+    max_episode_steps=10
 )
 
 

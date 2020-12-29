@@ -23,7 +23,7 @@ nonlinearity: "relu"
 # Task-specific
 # -------------
 # Number of trajectories to sample for each task.
-fast-batch-size: 17
+fast-batch-size: 20
 
 # Number of gradient steps in the inner loop / fast adaptation.
 num-steps: 1
@@ -34,10 +34,10 @@ fast-lr: 0.5
 # Optimization
 # ------------
 # Number of outer-loop updates (ie. number of batches of tasks).
-num-batches: 10
+num-batches: 8
 
 # Number of tasks in each batch of tasks.
-meta-batch-size: 30
+meta-batch-size: 20
 
 # TRPO-specific
 # -------------
@@ -51,7 +51,7 @@ cg-iters: 10
 cg-damping: 1.0e-5
 
 # Maximum number of steps in the line search.
-ls-max-steps: 2
+ls-max-steps: 10
 
 # Ratio to use for backtracking during the line search.
 ls-backtrack-ratio: 0.8
