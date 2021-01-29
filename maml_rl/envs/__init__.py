@@ -38,7 +38,7 @@ register(
     'TabularMDPDeterministic-v0',
     entry_point='maml_rl.envs.mdp-deterministic:TabularMDPEnv',
     kwargs={'num_states': 81, 'num_actions': 5},
-    max_episode_steps=10
+    max_episode_steps=50
 )
 
 
