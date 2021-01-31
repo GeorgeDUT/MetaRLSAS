@@ -1,0 +1,3 @@
+m 表示 meta-batch-size
+b 表示 num-batch-size
+gs 表示 gradient step，没有gs表示gs=1

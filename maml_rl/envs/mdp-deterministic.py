@@ -103,7 +103,8 @@ class TabularMDPEnv(gym.Env):
             """env[x][y]=-1 is the destination"""
             x,y= random.randint(3,4),random.randint(3,4)
             env = self.random_env_matrix()
-            env[x][y] = 0
+            x,y = 4,3
+            env[x][y] = -1
             for s in range(self.num_states):
                 for a in range(self.num_actions):
                     for s_ in range(self.num_states):

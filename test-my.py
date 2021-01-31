@@ -1,5 +1,7 @@
 """
-python test-my.py --config maml-halfcheetah-vel/config.json --policy maml-halfcheetah-vel/policy.th --output maml-halfcheetah-vel/results.npz --meta-batch-size 1 --num-batches 1  --num-workers 8
+python test-my.py --config maml-halfcheetah-vel/config.json
+--policy maml-halfcheetah-vel/policy.th --output maml-halfcheetah-vel/results.npz
+--meta-batch-size 1 --num-batches 1  --num-workers 8
 
 -meta-batch-size xxxx --num-batches xxxx
 

@@ -1,0 +1,25 @@
+1) maml_rl/envs/__init__.py
+	注册自己的环境：
+	register(
+    'TabularMDP-v1',
+    entry_point='maml_rl.envs.mdp-my:TabularMDPEnv',
+    kwargs={'num_states': 5, 'num_actions': 3},
+    max_episode_steps=10
+)
+
+
+2) /configs/maml/mdp/mdp-my.yaml
+	
+	基本设置。
+
+3) /maml_rl/envs/mdp-my.py
+	修改为迷宫环境。
+	sample_tasks 函数已修改
+
+实验步骤
+1）完成1-3步配置；
+2）训练：
+python train.py --config configs/maml/mdp/mdp-deterministic.yaml --output-folder mdp-deterministic/ --seed 1 --num-worker 8
+3）测试
+
+
