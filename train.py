@@ -1,4 +1,5 @@
 """
+train.py
 python train.py --config configs/maml/bandit/bandit-k5-n10.yaml --output-folder bandit/bandit-k5-n10 --seed 1 --num-workers 8
 """
 import gym
