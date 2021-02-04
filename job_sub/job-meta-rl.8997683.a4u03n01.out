@@ -1,0 +1,72 @@
+# conda environments:
+#
+rl-basic                 /gpfs/share/home/1701111326/.conda/envs/rl-basic
+spinningup               /gpfs/share/home/1701111326/.conda/envs/spinningup
+svm                      /gpfs/share/home/1701111326/.conda/envs/svm
+brain2                   /gpfs/share/software/anaconda3/envs/brain2
+tensorflow-gpu-1.8.0     /gpfs/share/software/anaconda3/envs/tensorflow-gpu-1.8.0
+root                  *  /gpfs/share/software/anaconda3
+
+/gpfs/share/home/1701111326/.conda/envs/rl-basic/lib/python3.6/site-packages/torch/cuda/__init__.py:52: UserWarning: CUDA initialization: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx (Triggered internally at  /pytorch/c10/cuda/CUDAFunctions.cpp:100.)
+  return torch._C._cuda_getDeviceCount() > 0
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:23<03:33, 23.70s/it] 20%|██        | 2/10 [00:34<02:06, 15.85s/it] 30%|███       | 3/10 [00:43<01:29, 12.76s/it] 40%|████      | 4/10 [01:04<01:35, 15.96s/it] 50%|█████     | 5/10 [01:26<01:31, 18.35s/it] 60%|██████    | 6/10 [01:35<01:00, 15.11s/it] 70%|███████   | 7/10 [01:44<00:39, 13.03s/it] 80%|████████  | 8/10 [01:58<00:26, 13.43s/it] 90%|█████████ | 9/10 [02:09<00:12, 12.75s/it]100%|██████████| 10/10 [02:18<00:00, 11.56s/it]100%|██████████| 10/10 [02:18<00:00, 13.86s/it]
+construct MDP time consume (seconds) 1.8363962173461914
+CategoricalMLPPolicy(
+  (layer1): Linear(in_features=81, out_features=32, bias=True)
+  (layer2): Linear(in_features=32, out_features=32, bias=True)
+  (layer3): Linear(in_features=32, out_features=5, bias=True)
+)
+construct MDP time consume (seconds) 3.7499449253082275
+CategoricalMLPPolicy(
+  (layer1): Linear(in_features=81, out_features=32, bias=True)
+  (layer2): Linear(in_features=32, out_features=32, bias=True)
+  (layer3): Linear(in_features=32, out_features=5, bias=True)
+)
+construct MDP time consume (seconds) 5.593590259552002
+CategoricalMLPPolicy(
+  (layer1): Linear(in_features=81, out_features=32, bias=True)
+  (layer2): Linear(in_features=32, out_features=32, bias=True)
+  (layer3): Linear(in_features=32, out_features=5, bias=True)
+)
+construct MDP time consume (seconds) 7.456975698471069
+CategoricalMLPPolicy(
+  (layer1): Linear(in_features=81, out_features=32, bias=True)
+  (layer2): Linear(in_features=32, out_features=32, bias=True)
+  (layer3): Linear(in_features=32, out_features=5, bias=True)
+)
+construct MDP time consume (seconds) 9.328574180603027
+CategoricalMLPPolicy(
+  (layer1): Linear(in_features=81, out_features=32, bias=True)
+  (layer2): Linear(in_features=32, out_features=32, bias=True)
+  (layer3): Linear(in_features=32, out_features=5, bias=True)
+)
+construct MDP time consume (seconds) 11.16900372505188
+CategoricalMLPPolicy(
+  (layer1): Linear(in_features=81, out_features=32, bias=True)
+  (layer2): Linear(in_features=32, out_features=32, bias=True)
+  (layer3): Linear(in_features=32, out_features=5, bias=True)
+)
+construct MDP time consume (seconds) 13.034231185913086
+CategoricalMLPPolicy(
+  (layer1): Linear(in_features=81, out_features=32, bias=True)
+  (layer2): Linear(in_features=32, out_features=32, bias=True)
+  (layer3): Linear(in_features=32, out_features=5, bias=True)
+)
+construct MDP time consume (seconds) 14.883149862289429
+CategoricalMLPPolicy(
+  (layer1): Linear(in_features=81, out_features=32, bias=True)
+  (layer2): Linear(in_features=32, out_features=32, bias=True)
+  (layer3): Linear(in_features=32, out_features=5, bias=True)
+)
+construct MDP time consume (seconds) 16.751862287521362
+CategoricalMLPPolicy(
+  (layer1): Linear(in_features=81, out_features=32, bias=True)
+  (layer2): Linear(in_features=32, out_features=32, bias=True)
+  (layer3): Linear(in_features=32, out_features=5, bias=True)
+)
+construct MDP time consume (seconds) 18.58507013320923
+CategoricalMLPPolicy(
+  (layer1): Linear(in_features=81, out_features=32, bias=True)
+  (layer2): Linear(in_features=32, out_features=32, bias=True)
+  (layer3): Linear(in_features=32, out_features=5, bias=True)
+)

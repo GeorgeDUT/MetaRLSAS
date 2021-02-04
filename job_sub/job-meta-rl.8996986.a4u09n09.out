@@ -1,42 +1,0 @@
-# conda environments:
-#
-rl-basic                 /gpfs/share/home/1701111326/.conda/envs/rl-basic
-spinningup               /gpfs/share/home/1701111326/.conda/envs/spinningup
-svm                      /gpfs/share/home/1701111326/.conda/envs/svm
-brain2                   /gpfs/share/software/anaconda3/envs/brain2
-tensorflow-gpu-1.8.0     /gpfs/share/software/anaconda3/envs/tensorflow-gpu-1.8.0
-root                  *  /gpfs/share/software/anaconda3
-
-/gpfs/share/home/1701111326/.conda/envs/rl-basic/lib/python3.6/site-packages/torch/cuda/__init__.py:52: UserWarning: CUDA initialization: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx (Triggered internally at  /pytorch/c10/cuda/CUDAFunctions.cpp:100.)
-  return torch._C._cuda_getDeviceCount() > 0
-  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:08<00:34,  8.70s/it] 40%|████      | 2/5 [00:16<00:25,  8.42s/it] 60%|██████    | 3/5 [00:25<00:17,  8.53s/it] 80%|████████  | 4/5 [00:33<00:08,  8.36s/it]100%|██████████| 5/5 [00:41<00:00,  8.25s/it]100%|██████████| 5/5 [00:41<00:00,  8.35s/it]
-construct MDP time consume (seconds) 1.69523024559021
-CategoricalMLPPolicy(
-  (layer1): Linear(in_features=81, out_features=32, bias=True)
-  (layer2): Linear(in_features=32, out_features=32, bias=True)
-  (layer3): Linear(in_features=32, out_features=5, bias=True)
-)
-construct MDP time consume (seconds) 3.4032034873962402
-CategoricalMLPPolicy(
-  (layer1): Linear(in_features=81, out_features=32, bias=True)
-  (layer2): Linear(in_features=32, out_features=32, bias=True)
-  (layer3): Linear(in_features=32, out_features=5, bias=True)
-)
-construct MDP time consume (seconds) 5.114216327667236
-CategoricalMLPPolicy(
-  (layer1): Linear(in_features=81, out_features=32, bias=True)
-  (layer2): Linear(in_features=32, out_features=32, bias=True)
-  (layer3): Linear(in_features=32, out_features=5, bias=True)
-)
-construct MDP time consume (seconds) 6.825460910797119
-CategoricalMLPPolicy(
-  (layer1): Linear(in_features=81, out_features=32, bias=True)
-  (layer2): Linear(in_features=32, out_features=32, bias=True)
-  (layer3): Linear(in_features=32, out_features=5, bias=True)
-)
-construct MDP time consume (seconds) 8.547295570373535
-CategoricalMLPPolicy(
-  (layer1): Linear(in_features=81, out_features=32, bias=True)
-  (layer2): Linear(in_features=32, out_features=32, bias=True)
-  (layer3): Linear(in_features=32, out_features=5, bias=True)
-)

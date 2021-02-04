@@ -13,4 +13,5 @@
 module load anaconda/3-4.4.0.1
 conda info -e
 source activate rl-basic
-python ~/MetaRLSAS/test-my-plus.py --config ~/MetaRLSAS/mdp-deterministic/config.json --policy ~/MetaRLSAS/mdp-deterministic/policy.th --output ~/MetaRLSAS/mdp-deterministic/results.npz --meta-batch-size 10 --num-batches 5 --num-workers 8
+python ~/MetaRLSAS/test-my-plus.py --config ~/MetaRLSAS/mdp-deterministic/config.json --policy ~/MetaRLSAS/mdp-deterministic/policy.th --output ~/MetaRLSAS/mdp-deterministic/results.npz --meta-batch-size 100 --num-batches 10 --num-workers 8
+
