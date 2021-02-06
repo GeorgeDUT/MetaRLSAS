@@ -104,9 +104,8 @@ class TabularMDPEnv(gym.Env):
             x,y= random.randint(3,4),random.randint(3,4)
             env = self.random_env_matrix()
             
+            # x,y = 4,3
             x,y = 4,3
-            # if in (3,4), the right now policy can get reward 
-            # x,y = 3,4
             env[x][y] = -1
             for s in range(self.num_states):
                 for a in range(self.num_actions):

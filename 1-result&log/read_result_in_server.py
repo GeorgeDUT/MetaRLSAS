@@ -5,8 +5,9 @@ print('files',result.files)
 train_return=result['train_returns']
 valid_return=result['valid_returns']
 # print(task)
-print(train_return)
-print(valid_return)
+# print(result['num_iterations'])
+# print(train_return)
+# print(valid_return)
 t_r=np.zeros(len(train_return),dtype=float)
 v_r=np.zeros(len(valid_return),dtype=float)
 
