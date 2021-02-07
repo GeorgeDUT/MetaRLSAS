@@ -84,15 +84,15 @@ def main(args):
 
         # to see the grad0 ~ multi gradient
         grad0_returns.append(get_returns(train_episodes[0]))
-        grad1_returns.append(get_returns(train_episodes[2]))
-        grad2_returns.append(get_returns(train_episodes[4]))
-        grad3_returns.append(get_returns(train_episodes[6]))
-        grad4_returns.append(get_returns(train_episodes[8]))
-        grad5_returns.append(get_returns(train_episodes[10]))
-        grad6_returns.append(get_returns(train_episodes[18]))
-        grad7_returns.append(get_returns(train_episodes[24]))
-        grad8_returns.append(get_returns(train_episodes[27]))
-        grad9_returns.append(get_returns(train_episodes[29]))
+        grad1_returns.append(get_returns(train_episodes[1]))
+        grad2_returns.append(get_returns(train_episodes[2]))
+        grad3_returns.append(get_returns(train_episodes[3]))
+        grad4_returns.append(get_returns(train_episodes[4]))
+        grad5_returns.append(get_returns(train_episodes[5]))
+        grad6_returns.append(get_returns(train_episodes[6]))
+        grad7_returns.append(get_returns(train_episodes[7]))
+        grad8_returns.append(get_returns(train_episodes[8]))
+        grad9_returns.append(get_returns(train_episodes[9]))
         logs['grad0_returns'] = np.concatenate(grad0_returns, axis=0)
         logs['grad1_returns'] = np.concatenate(grad1_returns, axis=0)
         logs['grad2_returns'] = np.concatenate(grad2_returns, axis=0)
@@ -125,6 +125,7 @@ def main(args):
     value[9] = logs['grad9_returns'].mean()
     value[10] = logs['valid_returns'].mean()
     print(value)
+    print(logs['valid_returns'].mean())
     # to see the grad0 ~ multi gradient
 
 

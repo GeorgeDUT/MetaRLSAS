@@ -41,6 +41,13 @@ register(
     max_episode_steps=50
 )
 
+# this is very simple grid environment, it is based on MDP
+register(
+    'SimpleMDP-v0',
+    entry_point='maml_rl.envs.mdp-example:SimpleMDP',
+    kwargs={'num_states': 10, 'num_actions': 5},
+    max_episode_steps=11
+)
 
 # Mujoco
 # ----------------------------------------

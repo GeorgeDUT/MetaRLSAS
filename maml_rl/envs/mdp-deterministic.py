@@ -105,7 +105,7 @@ class TabularMDPEnv(gym.Env):
             env = self.random_env_matrix()
             
             # x,y = 4,3
-            x,y = 4,3
+            # x,y = 4,3
             env[x][y] = -1
             for s in range(self.num_states):
                 for a in range(self.num_actions):
