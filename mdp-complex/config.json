@@ -9,7 +9,7 @@
   ],
   "nonlinearity": "relu",
   "fast-batch-size": 23,
-  "num-steps": 22,
+  "num-steps": 30,
   "fast-lr": 0.5,
   "num-batches": 101,
   "meta-batch-size": 20,

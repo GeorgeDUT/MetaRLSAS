@@ -27,6 +27,8 @@ from maml_rl.samplers import MultiTaskSampler
 from maml_rl.utils.helpers import get_policy_for_env, get_input_size
 from maml_rl.utils.reinforcement_learning import get_returns
 
+Grad_Steps = 30
+
 
 def main(args):
     with open(args.config, 'r') as f:
@@ -66,9 +68,9 @@ def main(args):
     train_returns, valid_returns = [], []
 
     # to see the grad0 ~ multi gradient
-    grad0_returns,grad1_returns,grad2_returns,grad3_returns = [],[],[],[]
-    grad4_returns, grad5_returns, grad6_returns, grad7_returns = [], [], [], []
-    grad8_returns, grad9_returns = [], []
+    grad_returns = []
+    for i in range(Grad_Steps):
+        grad_returns.append([])
     # to see the grad0 ~ multi gradient
 
     for batch in trange(args.num_batches):
@@ -83,26 +85,10 @@ def main(args):
         logs['tasks'].extend(tasks)
 
         # to see the grad0 ~ multi gradient
-        grad0_returns.append(get_returns(train_episodes[0]))
-        grad1_returns.append(get_returns(train_episodes[1]))
-        grad2_returns.append(get_returns(train_episodes[2]))
-        grad3_returns.append(get_returns(train_episodes[3]))
-        grad4_returns.append(get_returns(train_episodes[4]))
-        grad5_returns.append(get_returns(train_episodes[5]))
-        grad6_returns.append(get_returns(train_episodes[6]))
-        grad7_returns.append(get_returns(train_episodes[7]))
-        grad8_returns.append(get_returns(train_episodes[8]))
-        grad9_returns.append(get_returns(train_episodes[9]))
-        logs['grad0_returns'] = np.concatenate(grad0_returns, axis=0)
-        logs['grad1_returns'] = np.concatenate(grad1_returns, axis=0)
-        logs['grad2_returns'] = np.concatenate(grad2_returns, axis=0)
-        logs['grad3_returns'] = np.concatenate(grad3_returns, axis=0)
-        logs['grad4_returns'] = np.concatenate(grad4_returns, axis=0)
-        logs['grad5_returns'] = np.concatenate(grad5_returns, axis=0)
-        logs['grad6_returns'] = np.concatenate(grad6_returns, axis=0)
-        logs['grad7_returns'] = np.concatenate(grad7_returns, axis=0)
-        logs['grad8_returns'] = np.concatenate(grad8_returns, axis=0)
-        logs['grad9_returns'] = np.concatenate(grad9_returns, axis=0)
+        for i in range(Grad_Steps):
+            grad_returns[i].append(get_returns(train_episodes[i]))
+        for i in range(Grad_Steps):
+            logs['grad' + str(i) + '_returns'] = np.concatenate(grad_returns[i], axis=0)
         # to see the grad0 ~ multi gradient
 
         train_returns.append(get_returns(train_episodes[0]))
@@ -112,22 +98,13 @@ def main(args):
     logs['valid_returns'] = np.concatenate(valid_returns, axis=0)
 
     # to see the grad0 ~ multi gradient
-    value = [0]*11
-    value[0] = logs['grad0_returns'].mean()
-    value[1] = logs['grad1_returns'].mean()
-    value[2] = logs['grad2_returns'].mean()
-    value[3] = logs['grad3_returns'].mean()
-    value[4] = logs['grad4_returns'].mean()
-    value[5] = logs['grad5_returns'].mean()
-    value[6] = logs['grad6_returns'].mean()
-    value[7] = logs['grad7_returns'].mean()
-    value[8] = logs['grad8_returns'].mean()
-    value[9] = logs['grad9_returns'].mean()
-    value[10] = logs['valid_returns'].mean()
+    value = [0]*(Grad_Steps+1)
+    for i in range(Grad_Steps):
+        value[i] =  logs['grad' + str(i) + '_returns'].mean()
+    value[Grad_Steps] = logs['valid_returns'].mean()
     print(value)
     print(logs['valid_returns'].mean())
     # to see the grad0 ~ multi gradient
-
 
     with open(args.output, 'wb') as f:
         np.savez(f, **logs)

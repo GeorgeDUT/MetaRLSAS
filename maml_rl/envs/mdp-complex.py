@@ -90,7 +90,7 @@ class ComplexMDP(gym.Env):
         for i in range(num_tasks):
             """env[x][y]=-1 is the destination"""
             # x,y= random.randint(3,5),random.randint(3,5)
-            x, y = 5,3
+            x, y = 1,1
             env = self.random_env_matrix()
             env[x][y] = -1
             for jj in range(self.num_states):
