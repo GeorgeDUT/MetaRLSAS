@@ -9,9 +9,9 @@
   ],
   "nonlinearity": "relu",
   "fast-batch-size": 23,
-  "num-steps": 50,
+  "num-steps": 10,
   "fast-lr": 0.5,
-  "num-batches": 50,
+  "num-batches": 1,
   "meta-batch-size": 20,
   "max-kl": 0.01,
   "cg-iters": 10,
@@ -21,7 +21,7 @@
   "config": "configs/maml/mdp/mdp-simple.yaml",
   "output_folder": "mdp-simple/",
   "seed": 1,
-  "num_workers": 8,
+  "num_workers": 4,
   "use_cuda": false,
   "device": "cpu"
 }

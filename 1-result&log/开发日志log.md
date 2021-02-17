@@ -93,6 +93,27 @@ test-my-new.py
 
 小环境下的场景基本调通，可以进行下一步实验
 
+2021/2/16
+ python train.py --config configs/maml/mdp/mdp-simple.yaml --output-folder mdp-simple/ --seed 1 --num-workers 4
+
+训练，如果元训练训练轮数过多，后面泛化能力会降低，元策略在适应阶段无法适应新的环境，轮数过少（比如1轮），元策略又太差，在适应阶段要花费大量轮数训练策略。
+
+开始开发一个大的grid environment，9x9的网格。mdp-complex
+ python test-my-new.py --config mdp-complex/config.json --policy mdp-complex/policy.th --output mdp-complex/results.npz --meta-batch-size 5 --num-batches 20 --num-workers 2
+
+2021/2/17
+成功开发新的mdp环境，mdp-complex：
+相关文件：
+mdp-complex.py;mdp-complex.yaml;
+以及在maml_rl/envs/__init__.py注册的：
+# this is 10x10 grid environment, it is based on MDP.
+register(
+    'ComplexMDP-v0',
+    entry_point='maml_rl.envs.mdp-complex:ComplexMDP',
+    kwargs={'num_states': 82, 'num_actions': 5},
+    max_episode_steps=18
+)
+
 
 
 

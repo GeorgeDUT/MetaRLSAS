@@ -49,6 +49,14 @@ register(
     max_episode_steps=11
 )
 
+# this is 10x10 grid environment, it is based on MDP.
+register(
+    'ComplexMDP-v0',
+    entry_point='maml_rl.envs.mdp-complex:ComplexMDP',
+    kwargs={'num_states': 82, 'num_actions': 5},
+    max_episode_steps=18
+)
+
 # Mujoco
 # ----------------------------------------
 

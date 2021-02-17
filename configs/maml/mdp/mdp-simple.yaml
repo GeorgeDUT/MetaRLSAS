@@ -26,7 +26,7 @@ nonlinearity: "relu"
 fast-batch-size: 23
 
 # Number of gradient steps in the inner loop / fast adaptation.
-num-steps: 1
+num-steps: 3
 
 # Step size for each gradient step in the inner loop / fast adaptation.
 fast-lr: 0.5
@@ -34,7 +34,7 @@ fast-lr: 0.5
 # Optimization
 # ------------
 # Number of outer-loop updates (ie. number of batches of tasks).
-num-batches: 50
+num-batches: 1
 
 # Number of tasks in each batch of tasks.
 meta-batch-size: 20

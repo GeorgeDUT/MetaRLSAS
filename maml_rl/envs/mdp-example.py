@@ -82,7 +82,7 @@ class SimpleMDP(gym.Env):
         for i in range(num_tasks):
             """env[x][y]=-1 is the destination"""
             # x,y= random.randint(0,2),random.randint(2,2)
-            x, y = 2,1
+            x, y = 0,2
             env = self.random_env_matrix()
             env[x][y] = -1
             for jj in range(self.num_states):
