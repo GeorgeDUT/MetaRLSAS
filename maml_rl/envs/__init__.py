@@ -49,7 +49,7 @@ register(
     max_episode_steps=11
 )
 
-# this is 10x10 grid environment, it is based on MDP.
+# this is 9x9 grid environment, it is based on MDP.
 register(
     'ComplexMDP-v0',
     entry_point='maml_rl.envs.mdp-complex:ComplexMDP',

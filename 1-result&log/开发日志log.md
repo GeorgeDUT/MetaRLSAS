@@ -99,6 +99,8 @@ test-my-new.py
 训练，如果元训练训练轮数过多，后面泛化能力会降低，元策略在适应阶段无法适应新的环境，轮数过少（比如1轮），元策略又太差，在适应阶段要花费大量轮数训练策略。
 
 开始开发一个大的grid environment，9x9的网格。mdp-complex
+python train.py --config configs/maml/mdp/mdp-complex.yaml --output-folder mdp-complex/ --seed 2 --num-workers 4
+
  python test-my-new.py --config mdp-complex/config.json --policy mdp-complex/policy.th --output mdp-complex/results.npz --meta-batch-size 5 --num-batches 20 --num-workers 2
 
 2021/2/17
@@ -106,14 +108,14 @@ test-my-new.py
 相关文件：
 mdp-complex.py;mdp-complex.yaml;
 以及在maml_rl/envs/__init__.py注册的：
-# this is 10x10 grid environment, it is based on MDP.
+# this is 9x9 grid environment, it is based on MDP.
 register(
     'ComplexMDP-v0',
     entry_point='maml_rl.envs.mdp-complex:ComplexMDP',
     kwargs={'num_states': 82, 'num_actions': 5},
     max_episode_steps=18
 )
-
+在mdp-complex环境中，训练51轮足够使meta policy具有很好的泛化性，甚至还能实现在之前没有遇到过的目标的情况下，实现适应性。
 
 
 

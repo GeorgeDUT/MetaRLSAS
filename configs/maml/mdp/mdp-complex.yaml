@@ -23,10 +23,10 @@ nonlinearity: "relu"
 # Task-specific
 # -------------
 # Number of trajectories to sample for each task.
-fast-batch-size: 23
+fast-batch-size: 35
 
 # Number of gradient steps in the inner loop / fast adaptation.
-num-steps: 2
+num-steps: 3
 
 # Step size for each gradient step in the inner loop / fast adaptation.
 fast-lr: 0.5
@@ -34,10 +34,10 @@ fast-lr: 0.5
 # Optimization
 # ------------
 # Number of outer-loop updates (ie. number of batches of tasks).
-num-batches: 101
+num-batches: 90
 
 # Number of tasks in each batch of tasks.
-meta-batch-size: 20
+meta-batch-size: 10
 
 # TRPO-specific
 # -------------

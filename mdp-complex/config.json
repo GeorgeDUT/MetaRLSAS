@@ -8,11 +8,11 @@
     32
   ],
   "nonlinearity": "relu",
-  "fast-batch-size": 23,
+  "fast-batch-size": 35,
   "num-steps": 30,
   "fast-lr": 0.5,
-  "num-batches": 101,
-  "meta-batch-size": 20,
+  "num-batches": 90,
+  "meta-batch-size": 10,
   "max-kl": 0.01,
   "cg-iters": 10,
   "cg-damping": 1e-05,
@@ -20,8 +20,8 @@
   "ls-backtrack-ratio": 0.8,
   "config": "configs/maml/mdp/mdp-complex.yaml",
   "output_folder": "mdp-complex/",
-  "seed": 1,
-  "num_workers": 8,
+  "seed": 8,
+  "num_workers": 4,
   "use_cuda": false,
   "device": "cpu"
 }
