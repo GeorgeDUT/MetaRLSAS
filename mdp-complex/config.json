@@ -20,7 +20,7 @@
   "ls-backtrack-ratio": 0.8,
   "config": "configs/maml/mdp/mdp-complex.yaml",
   "output_folder": "mdp-complex/",
-  "seed": 8,
+  "seed": 2,
   "num_workers": 4,
   "use_cuda": false,
   "device": "cpu"
