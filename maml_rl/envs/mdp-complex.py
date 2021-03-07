@@ -88,11 +88,32 @@ class ComplexMDP(gym.Env):
         rewards_mean = self.np_random.normal(1.0, 1.0,
                                              size=(num_tasks, self.num_states, self.num_actions))
         for i in range(num_tasks):
+            env = self.random_env_matrix()
+            """environment state"""
+            # block_x1, block_y1 = random.randint(0,5), random.randint(1,2)
+            # block_x2, block_y2 = random.randint(0,5), random.randint(1,2)
+            # block_x3, block_y3 = random.randint(0,5), random.randint(1,2)
+            # block_x4, block_y4 = random.randint(0,5), random.randint(1,2)
+            # block_x1, block_y1 = 0, 3
+            # block_x2, block_y2 = 1, 5
+            # block_x3, block_y3 = 5, 3
+            # block_x4, block_y4 = 6, 3
+            # env[block_x1][block_y1] = 1
+            # env[block_x2][block_y2] = 1
+            # env[block_x3][block_y3] = 1
+            # env[block_x4][block_y4] = 1
+
+            """system action"""
+            # system_block_x, system_block_y = random.choice([[3,4],[4,3],[3,3]])
+            # system_block_x, system_block_y = 2,3
+            # env[system_block_x][system_block_y] = 1
+
+            """user goal"""
             """env[x][y]=-1 is the destination"""
             x,y= random.randint(3,6),random.randint(3,6)
             # x, y = 4,4
-            env = self.random_env_matrix()
             env[x][y] = -1
+
             for jj in range(self.num_states):
                 for kk in range(self.num_states):
                     for aa in range(self.num_actions):
