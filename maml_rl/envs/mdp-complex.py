@@ -105,13 +105,13 @@ class ComplexMDP(gym.Env):
 
             """system action"""
             # system_block_x, system_block_y = random.choice([[3,4],[4,3],[3,3]])
-            # system_block_x, system_block_y = 2,3
-            # env[system_block_x][system_block_y] = 1
+            system_block_x, system_block_y = 3,4
+            env[system_block_x][system_block_y] = 1
 
             """user goal"""
             """env[x][y]=-1 is the destination"""
-            x,y= random.randint(3,6),random.randint(3,6)
-            # x, y = 4,4
+            # x,y= random.randint(3,6),random.randint(3,6)
+            x, y = 4,4
             env[x][y] = -1
 
             for jj in range(self.num_states):

@@ -11,7 +11,7 @@
   "fast-batch-size": 35,
   "num-steps": 31,
   "fast-lr": 0.5,
-  "num-batches": 70,
+  "num-batches": 3,
   "meta-batch-size": 10,
   "max-kl": 0.01,
   "cg-iters": 10,
@@ -20,7 +20,7 @@
   "ls-backtrack-ratio": 0.8,
   "config": "configs/maml/mdp/mdp-complex.yaml",
   "output_folder": "mdp-complex/",
-  "seed": 34,
+  "seed": 9,
   "num_workers": 4,
   "use_cuda": false,
   "device": "cpu"
