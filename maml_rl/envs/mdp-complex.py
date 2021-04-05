@@ -111,7 +111,7 @@ class ComplexMDP(gym.Env):
             """user goal"""
             """env[x][y]=-1 is the destination"""
             # x,y= random.randint(3,6),random.randint(3,6)
-            x, y = 4,4
+            x, y = 1,5
             env[x][y] = -1
 
             for jj in range(self.num_states):

@@ -1,10 +1,19 @@
 # Meta_RL_For_SAS
 ## TooL
+Meta_RL_for_SAS:
 
-Meta_RL_For_SAS
+This project is using Meta Reinforcement learning to enhance the adaptability of self-learning adaptive system (SLAS).
 
-## MAML
+
+## Algorithm: MAML
+Our basic algorithm is based on MAML:
+
 https://github.com/tristandeleu/pytorch-maml-rl
+
+MAML project is, for the most part, a reproduction of the original implementation [cbfinn/maml_rl](https://github.com/cbfinn/maml_rl/) in Pytorch. These experiments are based on the paper
+> Chelsea Finn, Pieter Abbeel, and Sergey Levine. Model-Agnostic Meta-Learning for Fast Adaptation of Deep
+Networks. _International Conference on Machine Learning (ICML)_, 2017 [[ArXiv](https://arxiv.org/abs/1703.03400)]
+
 
 Reinforcement Learning with Model-Agnostic Meta-Learning (MAML)
 Implementation of Model-Agnostic Meta-Learning (MAML) applied on Reinforcement Learning problems in Pytorch. This repository includes environments introduced in ([Duan et al., 2016](https://arxiv.org/abs/1611.02779), [Finn et al., 2017](https://arxiv.org/abs/1703.03400)): multi-armed bandits, tabular MDPs, continuous control with MuJoCo, and 2D navigation task.
@@ -41,27 +50,14 @@ python test.py --config maml-halfcheetah-vel/config.json --policy maml-halfcheet
 ```
 
 ### References
-This project is, for the most part, a reproduction of the original implementation [cbfinn/maml_rl](https://github.com/cbfinn/maml_rl/) in Pytorch. These experiments are based on the paper
-> Chelsea Finn, Pieter Abbeel, and Sergey Levine. Model-Agnostic Meta-Learning for Fast Adaptation of Deep
-Networks. _International Conference on Machine Learning (ICML)_, 2017 [[ArXiv](https://arxiv.org/abs/1703.03400)]
 
-If you want to cite this paper
+If you want to cite this implementation of MetaRLSAS:
 ```
-@article{finn17maml,
-  author    = {Chelsea Finn and Pieter Abbeel and Sergey Levine},
-  title     = {{Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks}},
-  journal   = {International Conference on Machine Learning (ICML)},
-  year      = {2017},
-  url       = {http://arxiv.org/abs/1703.03400}
-}
-```
-
-If you want to cite this implementation:
-```
-@misc{deleu2018mamlrl,
-  author = {Tristan Deleu},
-  title  = {{Model-Agnostic Meta-Learning for Reinforcement Learning in PyTorch}},
-  note   = {Available at: https://github.com/tristandeleu/pytorch-maml-rl},
-  year   = {2018}
+@article{mingyue21ameta,
+  author    = {Mingyue Zhang and Jialong Li and Haiyan Zhao and Kenji Tei and Shinichi Honiden and Zhi Jin},
+  title     = {{A Meta Reinforcement Learning-based Approach for Online Adaptation}},
+  journal   = {Hold on},
+  year      = {2022},
+  url       = {Hold on}
 }
 ```

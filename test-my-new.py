@@ -27,7 +27,7 @@ from maml_rl.samplers import MultiTaskSampler
 from maml_rl.utils.helpers import get_policy_for_env, get_input_size
 from maml_rl.utils.reinforcement_learning import get_returns
 
-Grad_Steps = 30
+Grad_Steps = 50
 
 
 def main(args):
