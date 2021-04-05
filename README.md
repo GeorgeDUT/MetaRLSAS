@@ -40,13 +40,13 @@ pip install -r requirements.txt
 ##### Training
 You can use the [`train.py`](train.py) script in order to run reinforcement learning experiments with MAML. Note that by default, logs are available in [`train.py`](train.py) but **are not** saved (eg. the returns during meta-training). For example, to run the script on HalfCheetah-Vel:
 ```
-python train.py --config configs/maml/halfcheetah-vel.yaml --output-folder maml-halfcheetah-vel --seed 1 --num-workers 8
+python train.py --config configs/maml/mdp/mdp-complex.yaml --output-folder mdp-complex/ --seed 2 --num-workers 4
 ```
 
 ##### Testing
 Once you have meta-trained the policy, you can test it on the same environment using [`test.py`](test.py):
 ```
-python test.py --config maml-halfcheetah-vel/config.json --policy maml-halfcheetah-vel/policy.th --output maml-halfcheetah-vel/results.npz --meta-batch-size 20 --num-batches 10  --num-workers 8
+python test-my-new.py --config mdp-complex/config.json --policy mdp-complex/policy.th --output mdp-complex/results.npz --meta-batch-size 1 --num-batches 2 --num-workers 2
 ```
 
 ### References
