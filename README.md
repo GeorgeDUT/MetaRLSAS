@@ -38,7 +38,7 @@ pip install -r requirements.txt
 ### Usage
 
 ##### Training
-You can use the [`train.py`](train.py) script in order to run reinforcement learning experiments with MAML. Note that by default, logs are available in [`train.py`](train.py) but **are not** saved (eg. the returns during meta-training). For example, to run the script on HalfCheetah-Vel:
+You can use the [`train.py`](train.py) script in order to run reinforcement learning experiments with MAML. Note that by default, logs are available in [`train.py`](train.py) but **are not** saved (eg. the returns during meta-training). For example, to run the script on mdp-complex:
 ```
 python train.py --config configs/maml/mdp/mdp-complex.yaml --output-folder mdp-complex/ --seed 2 --num-workers 4
 ```
@@ -48,7 +48,26 @@ Once you have meta-trained the policy, you can test it on the same environment u
 ```
 python test-my-new.py --config mdp-complex/config.json --policy mdp-complex/policy.th --output mdp-complex/results.npz --meta-batch-size 1 --num-batches 2 --num-workers 2
 ```
+We already save a trained model in mdp-complex.
 
+##### How to change the parameters and use yourself environment
+1) maml_rl/envs/__init__.py
+	register your environment:
+	
+	register(
+    'TabularMDP-v1',
+    entry_point='maml_rl.envs.mdp-my:TabularMDPEnv',
+    kwargs={'num_states': 5, 'num_actions': 3},
+    max_episode_steps=10
+)
+
+2) basic settings:
+/configs/maml/mdp/mdp-my.yaml
+
+3) change the environment:
+/maml_rl/envs/mdp-my.py
+
+4) train & test
 ### References
 
 If you want to cite this implementation of MetaRLSAS:
