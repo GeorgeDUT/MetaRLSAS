@@ -79,11 +79,12 @@ Implementation of Model-Agnostic Meta-Learning (MAML) applied on Reinforcement L
 
 If you want to cite this implementation of MetaRLSAS:
 ```
-@article{mingyue21ameta,
+@inproceedings{mingyue21ameta,
   author    = {Mingyue Zhang and Jialong Li and Haiyan Zhao and Kenji Tei and Shinichi Honiden and Zhi Jin},
-  title     = {{A Meta Reinforcement Learning-based Approach for Online Adaptation}},
-  journal   = {Hold on},
-  year      = {2022},
-  url       = {Hold on}
+  title     = {A Meta Reinforcement Learning-based Approach for Online Adaptation},
+  booktitle = {{IEEE} International Conference on Autonomic Computing and Self-Organizing
+               Systems, {ACSOS} 2021},
+  publisher = {{IEEE}},
+  year      = {2021}
 }
 ```
