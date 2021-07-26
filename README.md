@@ -40,6 +40,11 @@ Once you have meta-trained the policy, you can test it on the same environment u
 ```
 python test-my-new.py --config mdp-complex/config.json --policy mdp-complex/policy.th --output mdp-complex/results.npz --meta-batch-size 1 --num-batches 2 --num-workers 2
 ```
+
+Grad_Steps = 50 in test-my-new.py is the step you want to print. You can set it to any number.
+But you should keep Grad_Steps < num-steps (num-steps is set in mdp-complex/config.json)
+
+
 We already save a trained model in mdp-complex.
 
 #### How to change the parameters and use yourself environment
